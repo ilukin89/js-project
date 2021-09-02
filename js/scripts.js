@@ -1,32 +1,32 @@
-const pokemonList = [
-    {
-    name:"Raticate",
-    height: 0.7,
-    types:"normal"
-},
-
-   {
-    name:"Charmander",
-    height: 0.6,
-    types:"fire"
-
-},
+const pokemonList = [{
+        name: "Raticate",
+        height: 0.7,
+        types: ["normal"]
+    },
 
     {
-    name:"Wigglytuff",
-    height: 1,
-    types:["fairy","normal"]
+        name: "Charmander",
+        height: 0.6,
+        types: ["fire"]
 
-},
+    },
+
     {
-    name:"Nidoking",
-    height: 1.4,
-    types:["ground","poison"]
+        name: "Wigglytuff",
+        height: 1,
+        types: ["fairy", "normal"]
 
-},
+    },
     {
-    name:"Victreebel",
-    height: 1.7,
-    types:["grass","poison"]
+        name: "Nidoking",
+        height: 1.4,
+        types: ["ground", "poison"]
 
-}];
+    },
+    {
+        name: "Victreebel",
+        height: 1.7,
+        types: ["grass", "poison"]
+
+    }
+];
