@@ -1,0 +1,22 @@
+* {
+    margin: 0 auto;
+
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    line-height: 1.6;
+    color: #211c33;
+    padding-left: 2rem;
+
+
+}
+
+
+h1 {
+    display: block;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
