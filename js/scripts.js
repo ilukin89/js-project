@@ -55,7 +55,7 @@ let pokemonRepository = (function () {
 
 })();
 
-document.write(pokemonRepository.getAll());
+pokemonRepository.getAll();
 
 
 
