@@ -1,5 +1,6 @@
 * {
     margin: 0 auto;
+    width: 80%;
 
 }
 
@@ -8,15 +9,27 @@ body {
     line-height: 1.6;
     color: #211c33;
     padding-left: 2rem;
-
+    background-color: white;
+    margin-bottom: 4rem;
 
 }
 
 
 h1 {
     display: block;
+    font-family: "Josefin Sans", sans-serif;
     margin-block-start: 1.67em;
     margin-block-end: 1.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    background-color: #101D2C;
+    text-align: center;
+    color: white;
+}
+
+section {
+    background-color: #f9f7f6;
+    font-weight: 300;
+    box-sizing: inherit;
+    padding-top: 1rem;
+    padding-left: 2rem;
+
 }
