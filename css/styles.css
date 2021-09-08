@@ -1,3 +1,13 @@
+/* 
+background color: white,
+primary color: #F9F7F6;
+primary text color: #211c3;
+button text color: white;
+button primary: #101D2C;
+button secondary: #C59963;
+*/
+
+
 * {
     margin: 0 auto;
     width: 80%;
@@ -25,11 +35,15 @@ h1 {
     color: white;
 }
 
-section {
+main {
     background-color: #f9f7f6;
     font-weight: 300;
     box-sizing: inherit;
     padding-top: 1rem;
     padding-left: 2rem;
 
+}
+
+.tota11y {
+    max-width: max-content;
 }
