@@ -48,19 +48,15 @@ let pokemonRepository = (function () {
 })();
 
 pokemonRepository.getAll().forEach(function (pokemon) {
+  document.write(
+    `This is ${pokemon.name}. <br> Height: ${pokemon.height} <br> Type: ${pokemon.types}<br>`
+  );
 
-
-    document.write(
-      `This is ${pokemon.name}. <br> Height: ${pokemon.height} <br> Type: ${pokemon.types}<br>`
-    );
-
-    if (pokemon.height > 1) {
-      document.write(`This is a big Pokemon<br><br>`);
-    } else if (pokemon.height > 0.5 && pokemon.height < 1) {
-      document.write(`This is an average Pokemon<br><br>`)
-    } else {
-      document.write(`This is a small Pokemon<br><br>`)
-    }
+  if (pokemon.height > 1) {
+    document.write(`This is a big Pokemon<br><br>`);
+  } else if (pokemon.height > 0.5 && pokemon.height < 1) {
+    document.write(`This is an average Pokemon<br><br>`);
+  } else {
+    document.write(`This is a small Pokemon<br><br>`);
   }
-
-)
+});
