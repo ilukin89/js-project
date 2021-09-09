@@ -5,6 +5,7 @@
 * Browsers: last 2 version
 */
 
+
 * {
   margin: 0 auto;
   width: 80%;
@@ -19,6 +20,7 @@ body {
   background-color: white;
   margin-bottom: 4rem;
 
+
 }
 
 
@@ -26,9 +28,9 @@ h1 {
   display: block;
   font-family: "Josefin Sans", sans-serif;
   -webkit-margin-before: 1.67em;
-          margin-block-start: 1.67em;
+  margin-block-start: 1.67em;
   -webkit-margin-after: 1.67em;
-          margin-block-end: 1.67em;
+  margin-block-end: 1.67em;
   background-color: #101D2C;
   text-align: center;
   color: white;
@@ -38,7 +40,7 @@ main {
   background-color: #f9f7f6;
   font-weight: 300;
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   padding-top: 1rem;
   padding-left: 2rem;
 
@@ -48,4 +50,43 @@ main {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.ul__button {
+  
+  background-color: #f9f7f6;
+  color: #c69963;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 1.8rem 3rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  text-align: center;
+  display: inline-block;
+  text-indent: 0px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+  text-rendering: auto;
+
+
+}
+
+
+.ul__button:hover {
+  background-color: #c99963;
+  color: white;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+
 }
