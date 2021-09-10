@@ -1,78 +1,86 @@
-let pokemonRepository = (function () {
-  let pokemonList = [{
-      name: "Raticate",
-      height: 0.7,
-      types: ["normal"],
-    },
+  //  pokemon list details
 
-    {
-      name: "Charmander",
-      height: 0.6,
-      types: ["fire"],
-    },
+  let pokemonRepository = (function () {
+    let pokemonList = [{
+        name: "Raticate",
+        height: 0.7,
+        types: ["normal"],
+      },
 
-    {
-      name: "Wigglytuff",
-      height: 1,
-      types: ["fairy", "normal"],
-    },
-    {
-      name: "Nidoking",
-      height: 1.4,
-      types: ["ground", "poison"],
-    },
-    {
-      name: "Victreebel",
-      height: 1.7,
-      types: ["grass", "poison"],
-    },
-    {
-      name: "Squirtle",
-      height: 0.5,
-      types: ["water"],
-    },
-  ];
+      {
+        name: "Charmander",
+        height: 0.6,
+        types: ["fire"],
+      },
 
-  function getAll() {
-    return pokemonList;
-  }
+      {
+        name: "Wigglytuff",
+        height: 1,
+        types: ["fairy", "normal"],
+      },
+      {
+        name: "Nidoking",
+        height: 1.4,
+        types: ["ground", "poison"],
+      },
+      {
+        name: "Victreebel",
+        height: 1.7,
+        types: ["grass", "poison"],
+      },
+      {
+        name: "Squirtle",
+        height: 0.5,
+        types: ["water"],
+      },
+    ];
 
-  function add(pokemon) {
-
-    if (typeof pokemon === 'object' && pokemon !== null) {
-      return pokemonList.push(pokemon);
-    } else {
-      return 'Variable is not an object';
+    function getAll() {
+      return pokemonList;
     }
-  }
 
-  function addListItem(pokemon) {
+    function add(pokemon) {
 
-    let pokemonUl = document.querySelector('.pokemon-list');
-    let listItem = document.createElement('li');
-    let button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add('ul__button');
-    listItem.appendChild(button);
-    pokemonUl.appendChild(listItem);
-    button.addEventListener('click', function () {
-      showDetails(pokemon);
-    })
-  };
+      if (typeof pokemon === 'object' && pokemon !== null) {
+        return pokemonList.push(pokemon);
+      } else {
+        return 'Variable is not an object';
+      }
+    }
 
-  function showDetails(pokemon) {
-    console.log(pokemon);
-  };
+    //  include html/css elements
 
-  return {
-    getAll: getAll,
-    add: add,
-    addListItem: addListItem
-  };
-})();
+    function addListItem(pokemon) {
 
-pokemonRepository.getAll().forEach(function (pokemon) {
+      let pokemonUl = document.querySelector('.pokemon-list');
+      let listItem = document.createElement('li');
+      let button = document.createElement('button');
+      button.innerText = pokemon.name;
+      button.classList.add('ul__button');
+      listItem.appendChild(button);
+      pokemonUl.appendChild(listItem);
+      button.addEventListener('click', function () {
+        showDetails(pokemon);
+      })
+    };
 
-  pokemonRepository.addListItem(pokemon);
+    // show pokemon details in console
 
-});
+    function showDetails(pokemon) {
+      console.log(pokemon);
+    };
+
+    return {
+      getAll: getAll,
+      add: add,
+      addListItem: addListItem
+    };
+  })();
+
+  // return pokemon list from repository
+
+  pokemonRepository.getAll().forEach(function (pokemon) {
+
+    pokemonRepository.addListItem(pokemon);
+
+  });
