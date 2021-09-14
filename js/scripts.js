@@ -7,6 +7,7 @@
     // api list
 
     function loadList() {
+
       return fetch(apiUrl).then(function (response) {
         return response.json();
       }).then(function (json) {
@@ -23,10 +24,13 @@
     }
 
 
+    // get list
+
     function getAll() {
       return pokemonList;
     }
 
+    // add pokemon
     function add(pokemon) {
 
       if (typeof pokemon === 'object' && pokemon !== null) {
@@ -69,16 +73,73 @@
 
     function showDetails(pokemon) {
       loadDetails(pokemon).then(function () {
-        console.log(pokemon);
+        showModal(pokemon);
       });
     };
+
+    // define modals
+
+    let modalContainer = document.querySelector('#modal-container');
+
+    function showModal(pokemon) {
+      modalContainer.innerHTML = '';
+      let modal = document.createElement('div');
+      modal.classList.add('modal');
+
+      //button
+      let closeButtonElement = document.createElement('button');
+      closeButtonElement.classList.add('modal-close');
+      closeButtonElement.innerText = 'Close';
+      closeButtonElement.addEventListener('click', hideModal);
+
+      let titleElement = document.createElement('h1');
+      titleElement.innerText = pokemon.name;
+
+      // content inside modal
+      let contentElement = document.createElement('p');
+      let pokemonImage = document.createElement('img');
+      pokemonImage.setAttribute('src', pokemon.imageUrl);
+      contentElement.innerText = 'Height:' + ' ' + pokemon.height;
+
+      modal.appendChild(closeButtonElement);
+      modal.appendChild(titleElement);
+      modal.appendChild(contentElement);
+      modal.appendChild(pokemonImage);
+      modalContainer.appendChild(modal);
+
+      modalContainer.classList.add('is-visible');
+    }
+
+    function hideModal() {
+      modalContainer.classList.remove('is-visible');
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+        hideModal();
+      }
+    });
+    modalContainer.addEventListener('click', (e) => {
+      let target = e.target;
+      if (target === modalContainer) {
+        hideModal();
+      }
+    });
+
+    document.querySelector('#show-modal').addEventListener('click', () => {
+      showModal(pokemon.name, pokemon);
+    });
+
+
 
     return {
       getAll: getAll,
       add: add,
       addListItem: addListItem,
       loadList: loadList,
-      loadDetails: loadDetails
+      loadDetails: loadDetails,
+      showModal: showModal,
+      hideMOdal: hideModal
     };
   })();
 
