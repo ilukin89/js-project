@@ -5,6 +5,7 @@
 * Browsers: last 2 version
 */
 
+
 * {
   margin: 0 auto;
   width: 80%;
@@ -20,8 +21,6 @@ body {
   padding-left: 2rem;
   background-color: white;
   margin-bottom: 4rem;
-
-
 
 }
 
@@ -72,11 +71,6 @@ ul {
   text-rendering: auto;
   width: 100%;
 
-
-
-
-
-
 }
 
 
@@ -93,6 +87,90 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+#modal-container {
+  position: fixed;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  /* to show it above other content */
+  z-index: 999;
+
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto;
+
+  /* this is used to center the modal */
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.modal-close {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  float: right;
+  margin: 0;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+  padding: 1rem;
+  margin-right: 0.5rem;
+}
+
+.modal h1 {
+
+  background: inherit;
+  color: inherit;
+  text-transform: capitalize;
+}
+
+.modal p {
+
+  width: -webkit-max-content;
+
+  width: -moz-max-content;
+
+  width: max-content;
+  float: left;
+  padding-left: 4rem;
+}
+
+.modal img {
+  width: 40%;
+  padding-left: 5rem;
+}
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  /* CSS for modal container - add your own desired CSS styles here */
+  display: block;
+}
+
+
+
 
 @media screen and (min-width : 700px) and (max-width : 1000px) {
 
@@ -188,7 +266,13 @@ ul {
 
   h1 {
     width: 100%;
-    font-size: calc(1em + 1vmin);
+    font-size: calc(1.5em + 1vmin);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
 
   }
@@ -224,6 +308,39 @@ ul {
 
 
   }
+
+  div.modal {
+    margin-bottom: 1.5rem;
+  }
+
+  .modal img {
+
+    width: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+  }
+
+  .modal p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+  }
 }
 
 @media all and (max-width : 500px) {
@@ -243,6 +360,49 @@ ul {
 
   main {
     padding: 0;
+  }
+
+  iv.modal {
+    margin-bottom: 1.5rem;
+  }
+
+  .modal img {
+
+    width: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+
+  }
+
+  .modal p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+  }
+
+  @media all and (max-width : 300px) {
+    .modal img {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+
   }
 
 }
