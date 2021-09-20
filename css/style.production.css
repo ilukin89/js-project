@@ -5,404 +5,297 @@
 * Browsers: last 2 version
 */
 
-
 * {
   margin: 0 auto;
-  width: 80%;
-
+  width: 100vh;
 }
-
-
 
 body {
-  font-family: "Nunito", sans-serif;
-  line-height: 1.6;
-  color: #211c33;
-  padding-left: 2rem;
-  background-color: white;
-  margin-bottom: 4rem;
 
+  margin-top: 3rem;
+  font-family: 'Inconsolata', 'Montserrat', sans-serif;
+  font-size: 20px;
+  background-image: url(img/blue-snow.png);
+  background-repeat: repeat;
+}
+
+.bg-light {
+  --bs-bg-opacity: 0!important;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+  color: #0d6efd;
+}
+
+.bg {
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both;
+}
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #19dcea;
+  }
+
+  100% {
+    background: #78D6DE;
+  }
+}
+
+@keyframes color-change-2x {
+  0% {
+    background: #19dcea;
+  }
+
+  100% {
+    background: #78D6DE;
+  }
 }
 
 
-h1 {
-  display: block;
-  font-family: "Josefin Sans", sans-serif;
+h1.title {
+
+  font-family: 'Knewave', cursive;
   -webkit-margin-before: 1.67em;
   margin-block-start: 1.67em;
   -webkit-margin-after: 1.67em;
   margin-block-end: 1.67em;
-  background-color: #101D2C;
+  background-color: inherit;
   text-align: center;
-  color: white;
+  color: #101D2C;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.2rem;
+  margin-top: 0;
 
 }
 
+h1.title {
 
-.tota11y {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
+  -webkit-animation: title 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: title 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+}
+
+@-webkit-keyframes title {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    letter-spacing: .2rem;
+    opacity: 1;
+  }
+}
+
+@keyframes title {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    letter-spacing: .2rem;
+    opacity: 1;
+  }
+}
+
+img.logo {
+  width: 4rem;
+  padding-bottom: 1rem;
+  -webkit-animation: heartbeat 4s ease-in-out infinite both;
+  animation: heartbeat 4s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+
+btn.invisible {
+  display: none;
+}
+
+.imgspan {
+  display: inline-block;
 }
 
 ul {
   list-style-type: none;
-
-
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.ul__button {
-
-  background-color: #f9f7f6;
-  color: #b9863b;
-  border: none;
-  border-radius: 0;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-family: "Josefin Sans", sans-serif;
-  padding: 1.2em 3rem;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  text-align: center;
-  text-indent: 0px;
-  line-height: normal;
-  letter-spacing: normal;
-  text-rendering: auto;
-  width: 100%;
-
+li {
+  padding: 0.3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 
-.ul__button:hover {
-  background-color: #b9863b;
-  color: white;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-
-}
-
-.pokemon-list {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#modal-container {
-  position: fixed;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-
-  /* to show it above other content */
-  z-index: 999;
-
-  /* to allow scrolling if the screen is not high enough*/
-  overflow: auto;
-
-  /* this is used to center the modal */
-  display: -ms-grid;
-  display: grid;
-  text-align: center;
-}
-
-.modal {
-  margin: auto;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: #fff;
-  width: 100%;
-  max-width: 700px;
-  text-align: left;
-}
-
-.modal-close {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  float: right;
-  margin: 0;
-  -webkit-appearance: none;
-  border: 0;
-  background: none;
-  color: #777;
-  text-decoration: underline;
-  padding: 1rem;
-  margin-right: 0.5rem;
-}
-
-.modal h1 {
-
-  background: inherit;
-  color: inherit;
+h1,
+h2,
+h3,
+h4,
+p,
+button {
   text-transform: capitalize;
-}
-
-.modal p {
-
-  width: -webkit-max-content;
-
-  width: -moz-max-content;
-
-  width: max-content;
-  float: left;
-  padding-left: 4rem;
-}
-
-.modal img {
-  width: 40%;
-  padding-left: 5rem;
-}
-
-#modal-container {
-  display: none;
-}
-
-#modal-container.is-visible {
-  /* CSS for modal container - add your own desired CSS styles here */
-  display: block;
-}
-
-
-
-
-@media screen and (min-width : 700px) and (max-width : 1000px) {
-
-  * {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  body {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0;
-    margin: 0;
-  }
-
-  main {
-    padding: 0;
-  }
-
-  button.ul__button,
-  button.ul__button:hover {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
-    font-size: 1.2rem;
-    width: 100%;
-
-
-  }
-
-
-  ul.pokemon-list {
-    padding: 0;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-
-
-  }
+  overflow: visible;
 
 }
 
-@media all and (max-width : 700px) {
-
-
-  * {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  body {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0;
-    margin: 0;
-  }
-
-  main {
-    padding: 0;
-  }
-
-
-  button.ul__button,
-  button.ul__button:hover {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    width: 100%;
-    font-size: calc(0.75em + 1vmin);
-
-
-  }
-
-  h1 {
-    width: 100%;
-    font-size: calc(1.5em + 1vmin);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-
-
-  }
-
-  main {
-
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
-
-
-
-  }
-
-  ul.pokemon-list {
-    padding: 0;
-    background-color: #f9f7f6;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-
-
-  }
-
-  div.modal {
-    margin-bottom: 1.5rem;
-  }
-
-  .modal img {
-
-    width: 20vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-  }
-
-  .modal p {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    float: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-
-  }
+h2 {
+  font-family: 'Knewave', cursive;
+  letter-spacing: 0.2rem;
 }
 
-@media all and (max-width : 500px) {
+.modal-header {
+  border: none;
+  padding-bottom: 1.5rem;
 
-  * {
-    width: 100%;
-    margin: 0 auto;
-  }
+}
 
-  body {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0;
-    margin: 0;
-  }
+.modal-footer {
+  border: none;
+  width: 8vw;
+}
 
-  main {
-    padding: 0;
-  }
+.btn {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 13vw;
+  font-size: inherit;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  -webkit-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  -webkit-box-shadow: inset 0 0 0 0;
+          box-shadow: inset 0 0 0 0;
+  
+  
+}
 
-  div.modal {
-    margin-bottom: 1.5rem;
-  }
+.btn:hover {
+  /* background-color: #0E65E5; */
+  -webkit-box-shadow: inset 400px 0 0 0 #0E65E5;
+          box-shadow: inset 400px 0 0 0 #0E65E5;
+}
 
-  .modal img {
+.btn-secondary {
+  background-color: #e5640e;
+  border: none;
+}
 
-    width: 20vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 1rem;
+   
 
-  }
+img.modal-img {
+  margin: 0;
+}
 
-  .modal p {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    float: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-
-  }
-
-  @media all and (max-width : 300px) {
-    .modal img {
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-    }
-
-  }
-
+.modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 130%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+ 
 }
