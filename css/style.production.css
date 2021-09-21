@@ -259,8 +259,8 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 13vw;
-  font-size: inherit;
+  width: 14vw;
+  font-size: 1rem;
   background-color: rgba(255, 255, 255, 0.6);
   border: none;
   -webkit-transition: ease-out 0.4s;
@@ -285,7 +285,8 @@ h2 {
    
 
 img.modal-img {
-  margin: 0;
+  display: flex;
+  
 }
 
 .modal-content {
@@ -304,7 +305,7 @@ img.modal-img {
 
 
 
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .btn {
     display: block;
     width: 90vw;
