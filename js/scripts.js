@@ -106,11 +106,11 @@ let pokemonRepository = (function () {
     //element for name in modal content
     let nameElement = $("<h2>" + pokemon.name + "</h2>");
 
-    let frontImage = $('<img class="modal-img" style="width:20%">');
+    let frontImage = $('<img class="modal-img">');
     frontImage.attr("src", pokemon.imageUrlFront);
     frontImage.src = pokemon.imageUrlFront;
 
-    let backImage = $('<img class="modal-img" style="width:20%">');
+    let backImage = $('<img class="modal-img">');
     backImage.attr("src", pokemon.imageUrlBack);
     backImage.src = pokemon.imageUrlBa;
 
