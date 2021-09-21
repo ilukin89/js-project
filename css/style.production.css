@@ -61,18 +61,13 @@ body {
 h1.title {
 
   font-family: 'Knewave', cursive;
-  -webkit-margin-before: 1.67em;
-  margin-block-start: 1.67em;
-  -webkit-margin-after: 1.67em;
-  margin-block-end: 1.67em;
   background-color: inherit;
   text-align: center;
   color: #101D2C;
   font-size: 3rem;
   margin-bottom: 3rem;
   letter-spacing: 0.2rem;
-  margin-top: 0;
-
+  
 }
 
 h1.title {
@@ -276,7 +271,6 @@ h2 {
 }
 
 .btn:hover {
-  /* background-color: #0E65E5; */
   -webkit-box-shadow: inset 400px 0 0 0 #0E65E5;
   box-shadow: inset 400px 0 0 0 #0E65E5;
 }
