@@ -114,6 +114,7 @@ h1.title {
 img.logo {
   width: 4rem;
   padding-bottom: 1rem;
+  padding-right: 0.8rem;
   -webkit-animation: heartbeat 4s ease-in-out infinite both;
   animation: heartbeat 4s ease-in-out infinite both;
 }
