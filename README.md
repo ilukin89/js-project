@@ -9,6 +9,12 @@ Create a small web application utilizing HTML, CSS and JS that loads data from e
 
 Technologies used: HTML, CSS, JS, Bootstrap, JQuery
 
+<h2>Key features</h2>
+
+● Load data from an external source (API) <br>
+● View a list of items<br>
+● On user action (e.g., by clicking on a list item), view details for that item<br>
+
 <h2>Requirements</h2>
 
 ● The app must load data from an external API; for instance, the Pokémon API. <br>
